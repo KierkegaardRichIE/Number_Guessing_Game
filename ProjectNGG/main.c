@@ -18,22 +18,22 @@ void GuessNum(int x) {
 	{
 		printf("Guess it: ");
 		scanf("%d", &guess);	/*玩家输入猜测结果*/
-		counter++;
+		counter++;	/*记录玩家猜测次数*/
 		if (guess == x) {
 			printf("You guessed the number by %d times!\n\n", counter);
 			return;
 		}
 		else if (guess < x) {
-			printf("Too low.Try again.\n");
+			printf("Too low.Try again.(You have tried %d times)\n",counter);
 		}
 		else
-			printf("Too high.Try again.\n");
+			printf("Too high.Try again.(You have tried %d times)\n",counter);
 	}
 }
 
 int main(void) {
-	char command1;
-	char command2;
+	char command1;	/*存储用户输入的选项(是否继续游戏)*/
+	char command2;	/*存储用户输入的选项(是否退出游戏)*/
 	int magic;
 	printf("This is guessing game\n\n");
 	srand(time(NULL));
