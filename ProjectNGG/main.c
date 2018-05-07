@@ -16,6 +16,8 @@ void GuessNum(int x) {
 	int guess, counter = 0;
 	for (;;)
 	{
+		char h[20] = "Too high";
+		char l[20] = "Too low";
 		printf("Guess it: ");
 		scanf("%d", &guess);	/*玩家输入猜测结果*/
 		counter++;	/*记录玩家猜测次数*/
@@ -24,10 +26,10 @@ void GuessNum(int x) {
 			return;
 		}
 		else if (guess < x) {
-			printf("Too low.Try again.(You have tried %d times)\n",counter);
+			printf("%-10s|Try again |You have tried %3d %2 times|\n",l,counter);
 		}
 		else
-			printf("Too high.Try again.(You have tried %d times)\n",counter);
+			printf("%-10s|Try again |You have tried %3d %2 times|\n",h,counter);
 	}
 }
 
@@ -35,7 +37,7 @@ int main(void) {
 	char command1;	/*存储用户输入的选项(是否继续游戏)*/
 	char command2;	/*存储用户输入的选项(是否退出游戏)*/
 	int magic;
-	printf("This is guessing game\n\n");
+	printf("Welcome to the NUMBER GUESSING GAME\n\n");
 	srand(time(NULL));
 loop1:
 	magic = Getnum();
