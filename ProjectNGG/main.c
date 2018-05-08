@@ -26,10 +26,10 @@ void GuessNum(int x) {
 			return;
 		}
 		else if (guess < x) {
-			printf("%-10s|Try again |You have tried %3d %2 times|\n",l,counter);
+			printf("%-10s|Try again | You have tried %3d %2 times|\n",l,counter);
 		}
 		else
-			printf("%-10s|Try again |You have tried %3d %2 times|\n",h,counter);
+			printf("%-10s|Try again | You have tried %3d %2 times|\n",h,counter);
 	}
 }
 
@@ -37,7 +37,7 @@ int main(void) {
 	char command1;	/*存储用户输入的选项(是否继续游戏)*/
 	char command2;	/*存储用户输入的选项(是否退出游戏)*/
 	int magic;
-	printf("Welcome to the NUMBER GUESSING GAME\n\n");
+	printf("=======Welcome to the NUMBER GUESSING GAME=======\n\n");
 	srand(time(NULL));
 loop1:
 	magic = Getnum();
